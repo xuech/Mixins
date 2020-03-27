@@ -1,19 +1,14 @@
-# vuecli3
+### 该项目用来再次学习Vue知识
 
-## Project setup
+下载或者克隆到本地，然后使用你喜欢的编译器打开
+
+#### 1、安装node_modules
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+#### 2、直接运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
