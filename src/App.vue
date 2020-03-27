@@ -30,8 +30,11 @@ export default {
             sex: '男'
         }
     },
+    //当该值为true时
+    doNotCall: true,
     mixins: [mixinsMethods],
     methods: {
+        // 如果组件中也有这个方法那么优先调用该方法
         // mixinMethods() {
         //     console.log('app-Methods')
         // }
@@ -45,7 +48,6 @@ export default {
     //     console.log(this.sex);
     // },
     mounted(){
-        //如果组件中定义了该方法则优先调用组件的方法，否则调用mixins中的同名方法
         this.mixinMethods();
     }
 }
