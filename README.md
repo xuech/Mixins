@@ -1,4 +1,4 @@
-# vuecli3
+# 该项目用来再次学习Vue知识
 
 ## Project setup
 ```
