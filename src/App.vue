@@ -15,12 +15,39 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import mixinDemo from '@/mixins/mixinsDemo.js';
+import mixinData from '@/mixins/mixinsData.js';
+import mixinsMethods from '@/mixins/mixinsMethods.js';
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+    name: 'app',
+    components: {
+        HelloWorld
+    },
+    data(){
+        return {
+            name: 'app-data',
+            sex: '男'
+        }
+    },
+    mixins: [mixinsMethods],
+    methods: {
+        // mixinMethods() {
+        //     console.log('app-Methods')
+        // }
+    },
+    created(){
+        console.log('created App!')
+    },
+    // mounted(){
+    //     console.log(this.name);//会替换掉mixins中的name属性，优先使用子组件同名属性
+    //     console.log(this.age);
+    //     console.log(this.sex);
+    // },
+    mounted(){
+        //如果组件中定义了该方法则优先调用组件的方法，否则调用mixins中的同名方法
+        this.mixinMethods();
+    }
 }
 </script>
 
